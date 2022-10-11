@@ -26,8 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/user_txt_view_margin_top"
-            android:textSize="@dimen/text_size"
             android:text="@string/login_text_view"
+            android:textSize="@dimen/text_size"
             app:layout_constraintStart_toStartOf="@+id/userImageView"
             app:layout_constraintTop_toBottomOf="@+id/userImageView" />
 
