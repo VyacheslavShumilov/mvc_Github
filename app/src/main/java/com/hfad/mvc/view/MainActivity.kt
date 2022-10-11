@@ -21,19 +21,11 @@ class MainActivity : AppCompatActivity(), IUsersVew {
 
         usersController = UsersController(this)
         (usersController as UsersController).onUsersList()
-
     }
 
     override fun onSuccessList(users: ArrayList<Users>) {
         val adapterUsers = AdapterUsers(users)
         binding.recyclerView.adapter = adapterUsers
-    }
-
-    override fun error(errMessage: String) {
-        binding.layoutNotConnection.visibility = View.VISIBLE
-        binding.btnClickReply.setOnClickListener {
-            (usersController as UsersController).onUsersList()
-        }
     }
 
     override fun progress(show: Boolean) {
@@ -43,6 +35,13 @@ class MainActivity : AppCompatActivity(), IUsersVew {
         } else {
             binding.layoutNotConnection.visibility = View.GONE
             binding.progressBar.visibility = View.GONE
+        }
+    }
+
+    override fun error(errMessage: String) {
+        binding.layoutNotConnection.visibility = View.VISIBLE
+        binding.btnClickReply.setOnClickListener {
+            (usersController as UsersController).onUsersList()
         }
     }
 }

@@ -13,7 +13,6 @@ data class Users(
     var url:String
 )
 
-
 data class User(
     @SerializedName("id")
     var id: Int,

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".view.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -30,18 +30,19 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Проверьте подключение к интернету и \повторите попытку" />
+            android:text="@string/internet_connection_text_view" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnClickReply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Повторите попытку" />
+            android:text="@string/retry_txt_btn" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

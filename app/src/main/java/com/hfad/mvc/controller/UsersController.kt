@@ -27,7 +27,7 @@ class UsersController(val usersView: IUsersVew) : IUsersController {
 
                 override fun onFailure(call: Call<ArrayList<Users>>, t: Throwable) {
                     view.progress(false)
-                    view.error("not connection internet")
+                    view.error("Check internet connection")
                 }
             })
         }

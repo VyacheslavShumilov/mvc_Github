@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Mvc"
         tools:targetApi="31">
         <activity
-            android:name=".UserActivity"
+            android:name=".view.user.UserActivity"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"

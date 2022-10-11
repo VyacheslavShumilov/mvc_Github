@@ -6,13 +6,14 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface Api {
     @GET("users")
     fun getUsers(): Call<ArrayList<Users>>
 
     @GET("users/{login}")
-    fun getUser(login: String): Call<User>
+    fun getUser(@Path("login") login: String): Call<User>
 
     companion object {
         var BASE_URL = "https://api.github.com/"

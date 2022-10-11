@@ -5,5 +5,5 @@ import com.hfad.mvc.model.User
 interface IUserView {
     fun successUser(user: User)
     fun progress(show:Boolean)
-    fun error()
+    fun error(errMessage: String)
 }
